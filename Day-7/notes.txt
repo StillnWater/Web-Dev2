@@ -1,0 +1,24 @@
+Execution context: of 2 types:
+    1.global:
+        2 phases:
+            1.creation: memory allocation
+            2.Execution:code Execution
+
+Code:
+    var a=10
+    console.log(a)
+    function demo(){
+        let b=20
+        console.log(b)
+    }
+    demo()
+    
+
+
+    2.Functional:
+        2 phases:
+            1.creation
+            2.Execution
+
+callstack keeps track of every thing in JS 
+its stores GEC one by one 

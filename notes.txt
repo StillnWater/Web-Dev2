@@ -1,0 +1,82 @@
+#12-01-26
+
+Hoisting:
+    -the variable declaration and the function declaration will move to top of the scope.
+    -the hoisting will perform only in var variable not in let and const(block scope)
+
+
+#callstack- storage of line by line code
+#first declaration is done and then initialization
+
+TDZ(temperal deadzone):
+    -proper initializationis not done so it stays in TDZ.
+
+Javascript:
+    #almost everything is object.
+    #It is synchronus.
+
++HOMEWORK+
+#why is console.log([2]==[])
+and console.log({}=={})
+
+#Array and string methods
+
+Math Function:
+    Math.abs(x)
+    Math.round
+    Math.ciel
+    Math.floor
+    Math.random
+
+
+#13-01-26
+
+console.log(1-"1")
+console.log("5"*"2")
+console.log(true+true)
+console.log(true+false)
+console.log(!!"false")
+console.log(!![]) #object exists 
+console.log([1,2]+[3,4])
+console.log([]+{})     #order flipped still same
+console.log(0.1+0.2===0.3)
+
+
+NaN 
+
+Return can only be executed once in and a function and after return it stops
+
+#for(init,condition,re init){
+    s1----
+    s2----
+
+}
+
+for(let i=0, i <=5,i++){
+    for(let j=1,j<=i,i++){
+        console.log(j)
+    }
+    console.log(i)
+}
+
+
+# map function returns a new array.
+
+
+Q. take an array of ten and find out the students those are passed and failed 
+corresponding to thier marks.
+
+=let numbers=[7,16,35,29,11,0,15,33,17,25];
+let doubled=numbers.filter((ak)=>{
+        if(ak>=16){
+            console.log(ak,"pass")
+        }
+        else{
+            console.log(ak,"fail")
+        }
+})
+
+reduce function:
+    let numbers=[1,2,3,4,5]
+    let sum=numbers.reduce((acc,current)
+    =>console.log(current))

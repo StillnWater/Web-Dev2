@@ -1,0 +1,2 @@
+1.find if the number is even or odd.
+2.check if a year is leap year or not

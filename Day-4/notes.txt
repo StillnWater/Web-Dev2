@@ -1,0 +1,22 @@
+Spread operator:
+it expands the array and the string and gives access to indivdual elements.
+
+Ternary operator:
+First class function:
+-in first class function we can pass a function through a variable and we are treating the variable as a function.
+-we can pass a funciton inside another unction as an argument.
+-it can return a function from an function.
+
+Anonymous function:
+-a function without any name. they are often used as arguments to other functions or assigned to variables
+eg: setTimeout, setInterval(print in every given time)
+
+Self invoking function(IIFE- immediately invoked functon expression)
+
+Advantage of IIFE:
+-to obtain data privacy 
+-dont give access to call anywhere
+
+(function(){
+    console.log("this is IIFE")
+})()

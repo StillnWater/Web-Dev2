@@ -1,0 +1,6 @@
+1. initializing an array and reversing it via push and pop.
+2.remove all negatiev numbers from an array.
+3.check an array is palindrom or not.
+4.move all zeros to the end of the array.
+5.undo/redo simulation
+6.settimeout
