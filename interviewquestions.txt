@@ -5,7 +5,7 @@
 5.explain different array methods in Js
     -map vs filter vs reduce
     -find and filter
-    -map and foreach
+    -map and for each
     -some and every
 6.string, object methods.
 7.types of function
