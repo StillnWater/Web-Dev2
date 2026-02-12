@@ -11,6 +11,9 @@ Hoisting:
 TDZ(temperal deadzone):
     -proper initializationis not done so it stays in TDZ.
 
+    Temporal Dead Zone (TDZ) in JavaScript is a period during code execution when a variable declared with let or const is hoisted (moved to the top 
+    of its scope) but not yet initialized with a value.  During this time, attempting to access the variable results in a ReferenceError. 
+
 Javascript:
     #almost everything is object.
     #It is synchronus.
