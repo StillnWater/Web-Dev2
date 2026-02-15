@@ -1,57 +1,123 @@
 const eventForm = document.getElementById("eventForm");
-const eventTitle = document.getElementById("eventTitle");
+const eventName = document.getElementById("eventName");
 const eventDate = document.getElementById("eventDate");
 const eventCategory = document.getElementById("eventCategory");
 const eventDescription = document.getElementById("eventDescription");
 
-const clearAllBtn = document.getElementById("clearAllBtn");
-const addSampleBtn = document.getElementById("addSampleBtn");
+const clearAllBtn = document.getElementById("clear-btn");
+const addSampleBtn = document.getElementById("sample-btn");
 const eventContainer = document.getElementById("eventContainer");
 
-let sampleEvent = [
+const sampleEvents = [
   {
-    title: "Web dev",
-    date: "4-12-2026",
-    category: "workshop",
-    description: "hasvhuno oadhoo asoikla dfoi",
+    title: "workshop: Web Development 101",
+    date: "2026-12-04",
+    category: "Workshop",
+    description: "ajhsvcjhavscjhasvcas.",
   },
   {
-    title: "Web dev2",
-    date: "5-12-2026",
-    category: "conference",
-    description: "hasvhuno oadshdbf hoo asoikla dfoi",
+    title: "Meetup: JavaScript Enthusiasts",
+    date: "2026-12-10",
+    category: "Social",
+    description: "jkasbcasbckjabsclkjsbac",
   },
 ];
 
-//   create event card
+function updateEmptyState() {
+  const emptyMsg = eventContainer.querySelector(".empty-msg");
+
+  if (eventContainer.querySelectorAll(".event-item").length > 0 && emptyMsg) {
+    emptyMsg.remove();
+  } else if (
+    eventContainer.querySelectorAll(".event-item").length === 0 &&
+    !emptyMsg
+  ) {
+    eventContainer.innerHTML = `<p class="empty-msg">No events yet. Add your first event!</p>`;
+  }
+}
+
 function createEventCard(eventData) {
   const card = document.createElement("div");
+  card.className = "event-item";
+
   card.innerHTML = `
-    <button class=delete-btn>X</button>
-    <h3>${eventData.title}</h3>
-    <div>${eventData.date}</div>
-    <span>${eventData.category}</span>
-    <p>${eventData.description}</p>
-    `;
+    <div class="event-header">
+        <h3>${eventData.title}</h3>
+        <button class="delete-btn" title="Delete Event">X</button>
+    </div>
+    <div class="event-date">📅 ${eventData.date}</div>
+    <div class="event-category">${eventData.category}</div>
+    <p class="event-desc">${eventData.description}</p>
+  `;
+
+  card.querySelector(".delete-btn").addEventListener("click", () => {
+    card.style.opacity = "0";
+    setTimeout(() => {
+      card.remove();
+      updateEmptyState();
+    }, 200);
+  });
+
   return card;
 }
 
-function addEvent(eventData) {
-  const emptyState = document.querySelector(".empty-state");
-  if (emptyState) emptyState.remove();
+eventForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-  eventContainer.appendChild(createEventCard(eventData));
-}
-
-eventForm.addEventListener("submit", (event) => {
-  event.preventDefault();
   const eventData = {
-    title: eventTitle.value,
+    title: eventName.value,
     date: eventDate.value,
     category: eventCategory.value,
     description: eventDescription.value,
   };
 
-  addEvent(eventData);
+  const newCard = createEventCard(eventData);
+
+  const emptyMsg = eventContainer.querySelector(".empty-msg");
+  if (emptyMsg) emptyMsg.remove();
+
+  eventContainer.appendChild(newCard);
   eventForm.reset();
+});
+
+addSampleBtn.addEventListener("click", () => {
+  sampleEvents.forEach((data) => {
+    const emptyMsg = eventContainer.querySelector(".empty-msg");
+    if (emptyMsg) emptyMsg.remove();
+    eventContainer.appendChild(createEventCard(data));
+  });
+});
+
+clearAllBtn.addEventListener("click", () => {
+  if (confirm("Delete all events?")) {
+    eventContainer.innerHTML = "";
+    updateEmptyState();
+  }
+});
+
+const demoBox = document.querySelector(".demo-box");
+
+function updateTracker(type, value) {
+  demoBox.innerHTML = `
+    <div class="tracker-line">
+      <span>Last Event:</span>
+      <span class="key-badge">${type}</span>
+    </div>
+    <div class="tracker-line">
+      <span>Value/Button:</span>
+      <span style="color: #fbbf24">${value}</span>
+    </div>
+  `;
+}
+
+window.addEventListener("mousedown", (e) => {
+  const buttons = ["Left Click", "Middle Click", "Right Click"];
+  updateTracker("Mouse Pressed", buttons[e.button] || `Button ${e.button}`);
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === " ") e.preventDefault();
+
+  const keyName = e.key === " " ? "Space" : e.key;
+  updateTracker("Key Pressed", keyName);
 });
