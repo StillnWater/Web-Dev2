@@ -7,3 +7,10 @@ async keyword,
 
 
  #EVENT LOOP
+
+ return shouldnt be used in async funtions
+
+ simultaneous dependent 
+
+callback hell(pyramid of doom): related to maintainability
+promise chaining is the solution of callback hell.
