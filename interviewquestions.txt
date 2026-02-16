@@ -21,3 +21,4 @@
 10.difference between setInterval and setTimeout.
 11.What is DOM.
 12. Diff between get elementbyid and get elementsbyclassname
+13. Why do we need asynchronus code in Js?

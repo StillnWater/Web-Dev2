@@ -1,0 +1,9 @@
+blocking nature of code -- syncronous code 
+
+non blocking nature-asynchronus style of coding (not multithreaded but non blocking)
+
+async keyword,
+ setTimeout, setInterval are some async in defaut nature
+
+
+ #EVENT LOOP
