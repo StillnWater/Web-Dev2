@@ -1,0 +1,12 @@
+promise:    1.resolve
+            2.rejected
+            3.pending
+
+
+promise- smart organization of callback funtion
+
+response object in the form of promise 
+then we will get json in form of promise
+
+promise hell-it is nested promises
+solution is promise chaining
