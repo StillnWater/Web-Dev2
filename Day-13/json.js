@@ -8,15 +8,11 @@ fetch("link")
 
 
 fetch("link")
-.then((robj)=>{
-    return robj.json();
-})
+.then(robj=>robj.json();)
 
-.then((data)=>{
-    console.log(data);
-})
+.then(data=>console.log(data);)
 
-.catch((err)=>{
+.catch(err =>{
     console.log(err);
 });
 
