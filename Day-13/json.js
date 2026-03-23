@@ -40,7 +40,7 @@ function getVideoList(email) {
                 { title: "video 1" },
                 { title: "video 2" }
             ]);
-        }, 1000);
+        }, 2000);
     });
 }
 
@@ -51,11 +51,10 @@ function getVideoDetail(video) {
                 title: video.title,
                 description: "This is a video about " + video.title
             });
-        }, 1000);
+        }, 2000);
     });
 }
 
-// promise chaining
 login("jondoe@gmail.com", "password")
     .then(userdata => {
         console.log("User:", userdata);

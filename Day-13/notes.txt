@@ -10,3 +10,6 @@ then we will get json in form of promise
 
 promise hell-it is nested promises
 solution is promise chaining
+
+
+2 promises are required for- promise to data

@@ -1,0 +1,4 @@
+using async we dont have to use .then in promise handling we can instead use await
+
+calling asynchronus funtion - we get promises
+

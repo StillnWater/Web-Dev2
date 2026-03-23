@@ -29,18 +29,18 @@ function login(uname,password,cb){
         cb({uname:uname,isloggedin:true,message:"login succesfull"});
 
     },1000);
-
+}
 function getvideolist(email,cb){
     setTimeout(()=>{
-        cb({Title:"video 1"},{Title:"video 2"});
+        cb([{Title:"video 1"},{Title:"video 2"}]);
 
     },1000);
 
 }
 
-function getvideodeatail(email,cb){
+function getvideodeatail(video,cb){
     setTimeout(()=>{
-        cb({Title:video.title.description: "this is a video about" + video.title});
+        cb({Title:video.title,description: "this is a video about" + video.title});
 
     },1000);
 
@@ -48,7 +48,10 @@ login("jondoe@gmail.com" ,"password" ,(userdata)=>{
     console.log(userdata);
     getvideolist(userdata.uname,(videolist)=>{
         console.log(videolist)
+        getvideodeatail(videolist[0],(videodetail)=>{
+            console.log(videodetail)
+        })
     })
 
 });
-
+}
