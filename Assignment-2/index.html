@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>⛅ Async Weather Tracker</h1>
+
+  <div class="main-container">
+
+    
+    <div class="left-box">
+
+      
+      <div class="box">
+        <p>Search City</p>
+        <div class="search-area">
+          <input type="text" id="cityInput" placeholder="Delhi, London..." />
+          <button id="searchBtn">Search</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <p>Search History</p>
+        <div id="historyDiv">
+          
+        </div>
+        <br>
+        <button id="clearBtn" onclick="clearAllHistory()" style="display:none;">Clear History</button>
+      </div>
+
+    </div>
+
+    <div class="right-box">
+      <div class="box" id="weatherBox">
+        <p>Weather Info</p>
+        <div id="weatherResult">
+          <!-- weather data shows here -->
+          <span style="color: grey; font-size: 14px;">Search a city to see weather</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="console-box">
+    <div class="console-top">
+      <span>Console – Event Loop</span>
+      <button onclick="clearConsole()">clear</button>
+    </div>
+    <div id="consoleDiv">
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
