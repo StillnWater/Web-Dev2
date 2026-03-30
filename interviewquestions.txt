@@ -22,3 +22,9 @@
 11.What is DOM.
 12. Diff between get elementbyid and get elementsbyclassname
 13. Why do we need asynchronus code in Js?
+14.Explain the Lifecycle of a Promise.
+15.What is Promise Chaining and its disadvantages?
+16.Explain the Event Loop and how asynchronous code executes in the execution context.
+17.Explain Execution Context and Call Stack.How does JavaScript code execute?
+18.What is react and explain the features of react?
+19.what is virtual DOM?
