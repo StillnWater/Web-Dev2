@@ -1,0 +1,12 @@
+react has 2 virtual DOMS
+
+v1= copy of the real dom 
+v2= managing the changes
+
+comparision btw v1 and v2 is diffing algorithm
+
+the process of updation of real DOM is called as reconsilation
+
+babel is a JS compiler, transcompiler
+
+Named export and Default export

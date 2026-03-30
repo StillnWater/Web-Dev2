@@ -19,7 +19,7 @@ function clearConsole() {
 const loadCache = () => JSON.parse(localStorage.getItem("wthr_history")) || [];
 
 const persistCity = (cityName) => {
-  let cache = loadCache().filter(c => c.toLowerCase() !== cityName.toLowerCase());
+  let  cache = loadCache().filter(c => c.toLowerCase() !== cityName.toLowerCase());
   cache = [cityName, ...cache].slice(0, 8); // keep latest 8
   localStorage.setItem("wthr_history", JSON.stringify(cache));
 };
