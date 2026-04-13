@@ -28,3 +28,9 @@
 17.Explain Execution Context and Call Stack.How does JavaScript code execute?
 18.What is react and explain the features of react?
 19.what is virtual DOM?
+20.what is single page application?the diff btw Single page application and multiple page application?
+21.Explain one way data binding.
+22.How jsx works in react and what is babel?
+23.Explain life cycle methods and its disadvantages.
+24.how to tackle life cycle methods by using useeffect hook?
+
