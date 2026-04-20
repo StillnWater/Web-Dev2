@@ -33,4 +33,5 @@
 22.How jsx works in react and what is babel?
 23.Explain life cycle methods and its disadvantages.
 24.how to tackle life cycle methods by using useeffect hook?
+25.Difference btw controlled and uncontrolled components
 

@@ -10,3 +10,12 @@
 
 Note: we cant rerender elements using normal JS elements.
 
+## Useeffect
+>it is used to manage all the life cycle methods alone.
+
+Syntax:
+```jsx
+useEffect(()=>{},[])
+useEffect Takes 2 parameter-- Callback and dependancy-array
+```
+If the dependency array is empty then it will mount only , when the page is reloaded for the first time.once
