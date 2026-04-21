@@ -1,1 +1,4 @@
-npm create vite@latest -- --template react
+react folder creation:
+    npm create vite@latest
+react  routing:
+    npm i react-router-dom
